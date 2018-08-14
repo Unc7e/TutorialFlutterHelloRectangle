@@ -1,7 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
-const _padding = EdgeInsets.all(16.0);
+class HelloRectangle extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        color: Colors.greenAccent,
+        height: 400.0,
+        width: 300.0,
+        child: Center(
+          child: Text("Hello!", style: TextStyle(fontSize: 40.0)),
+        ),
+      ),
+    );
+  }
+}
 
 void main() {
   runApp(
@@ -15,25 +28,4 @@ void main() {
       ),
     ),
   );
-}
-
-class HelloRectangle extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-        child: Container(
-      padding: _padding,
-      color: Colors.greenAccent,
-      height: 400.0,
-      width: 300.0,
-      child: Padding(
-        padding: _padding,
-        child: Text(
-          'Hello, World!',
-          style: TextStyle(fontSize: 40.0),
-          textAlign: TextAlign.center,
-        ),
-      ),
-    ));
-  }
 }
